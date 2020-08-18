@@ -10,10 +10,10 @@ from flask import Flask, render_template
 
 
 def page_not_found(e):
-  return render_template('error.html' message='Sorry it seems we cannot find the page you are looking for.'), 404
+  return render_template('error.html'), 404
 
 def not_allowed(e):
-  return render_template('error.html', message='Sorry you are forbidden from completing this action.'), 403
+  return render_template('error.html'), 403
 #------------------------------------------
 
 def create_app(test_config=None):
@@ -55,8 +55,7 @@ def create_app(test_config=None):
     # Route for home page
     @app.route('/')
     def index():
-        user = todos.get_user_info()
-        return render_template('index.html')
+        return render_template('mainPages/index.html')
 
 
     # Return application object to be used by a WSGI server, like gunicorn
