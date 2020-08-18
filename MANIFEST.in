@@ -1,0 +1,4 @@
+include ssdwebsite/schema.sql
+graft ssdwebsite/static
+graft ssdWebsite/templates
+global-exclude *.pyc

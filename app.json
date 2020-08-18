@@ -1,0 +1,22 @@
+{
+  "name": "Scientific-Self-Determination",
+  "description": "A effective website for SSD and their values.",
+  "keywords": ["python", "flask", "postgresql", "heroku"],
+  "addons": [{
+    "plan": "heroku-postgresql",
+    "options": {
+      "version": "12"
+    }
+  }],
+  "formation": {
+    "web": {
+      "quantity": 1,
+      "size": "free"
+    }
+  },
+  "env": {
+    "FLASK_APP": {
+      "value": "ssdwebsite"
+    }
+  }
+}
