@@ -1,18 +1,17 @@
-<!doctype html>
-<title>{% block title %}{% endblock %} - Flaskr</title>
+<!DOCTYPE html>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>{% block title %}  {% endblock %} -Flaskr</title>
 <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
 
-  <h1>Flaskr</h1>
-  <!-- TODO: Change header and footer to be on index (Index will be more detailed
-  template) Then add a home html page -->
 <header>
 
   <nav>
 
-    <a href="mainPages/index.html">Home</a>
-    <a href="mainPages/contributor.html">Contributors</a>
-    <a href="mainPages/ourVision.html">Our Vision</a>
-    <a href="mainPages/contact.html">Contact Us</a>
+    <a href="{{ url_for('index')}}">Home</a>
+    <a href="{{ url_for('people_involved.contributors') }}">Contributors</a>
+    <a href="{{ url_for('menu_text.vision') }}">Our Vision</a>
+    <a href="{{ url_for('menu_text.media') }}">Media</a>
+    <a href="{{ url_for('menu_text.contact') }}">Contact Us</a>
 
   </nav>
 
@@ -24,7 +23,7 @@
 
 {% endblock %}
 
-</acticle>
+</article>
 
 <footer>
 

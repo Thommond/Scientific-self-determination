@@ -2,7 +2,7 @@ import os
 
 from flask import Flask, render_template
 
-
+from sassutils.wsgi import SassMiddleware
 
 #######################
 ##### Error Pages #####
@@ -24,6 +24,12 @@ def create_app(test_config=None):
 
     # Create the Flask application object using this module's name
     app = Flask(__name__)
+
+    # Defining sass middleware so application can run directly and scss/sass can be used.
+    app.wsgi_app = SassMiddleware(app.wsgi_app, {
+        'ssdwebsite': ('static/sass', 'static/css', '/static/css')
+    })
+
     app.register_error_handler(404, page_not_found)
     app.register_error_handler(403, not_allowed)
 
@@ -51,11 +57,19 @@ def create_app(test_config=None):
         # App configuration specifically for tests
         app.config.from_mapping(test_config)
 
+    # Basic Text routes.
+    from . import menu_text
+    app.register_blueprint(menu_text.bp)
+
+    # Contributor routes
+    from . import people_involved
+    app.register_blueprint(people_involved.bp)
+
 
     # Route for home page
     @app.route('/')
     def index():
-        return render_template('mainPages/index.html')
+        return render_template('menu-pages/index.html')
 
 
     # Return application object to be used by a WSGI server, like gunicorn
