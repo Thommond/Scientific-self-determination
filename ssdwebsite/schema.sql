@@ -4,6 +4,7 @@ DROP TABLE IF EXISTS blogs;
 DROP TABLE IF EXISTS contributors;
 DROP TABLE IF EXISTS users;
 
+--TODO make tables collaberate together via blog posts, and contributor posts
 
 -- Users
 CREATE TABLE users (
@@ -35,5 +36,5 @@ CREATE TABLE contributorImages (
 
   id INT PRIMARY KEY ,
   name TEXT NOT NULL ,
-  photo bytea NOT NULL 
+  photo bytea NOT NULL
 }

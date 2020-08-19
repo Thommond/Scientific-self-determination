@@ -1,5 +1,9 @@
 
-/* General Styles */
+/**
+General Styles
+*/
+
+/* TODO: Download SASS tech to make CSS simpler */
 html {
   box-sizing: border-box;
 }

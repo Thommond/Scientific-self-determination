@@ -1,12 +1,101 @@
 <!doctype html>
 <title>{% block title %}{% endblock %} - Flaskr</title>
 <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
-<nav>
+
   <h1>Flaskr</h1>
+  <!-- TODO: Change header and footer to be on index (Index will be more detailed
+  template) Then add a home html page -->
+<header>
 
-</nav>
+  <nav>
 
-<section class="content">
+    <a href="mainPages/index.html">Home</a>
+    <a href="mainPages/contributor.html">Contributors</a>
+    <a href="mainPages/ourVision.html">Our Vision</a>
+    <a href="mainPages/contact.html">Contact Us</a>
+
+  </nav>
+
+</header>
+
+<article class="content">
+
 {% block content %}
+
 {% endblock %}
-</section>
+
+</acticle>
+
+<footer>
+
+  <div class=''>
+
+    <div class=''>
+
+      <h3>Join Us!</h3>
+
+      <a href="#" ><img src="" alt=""></a><!--Instagram-->
+      <a href="#" ><img src="" alt=""></a><!--Twitter-->
+      <a href="#" ><img src="" alt=""></a><!--Youtube-->
+      <a href="#" ><img src="" alt=""></a><!--Facebook-->
+      <a href="#" ><img src="" alt=""></a><!--Reddit Group-->
+      <a href="#" ><img src="" alt=""></a><!--Twitch-->
+      <a href="#" ><img src="" alt=""></a><!--Jitsy-->
+      <a href="#" ><img src="" alt=""></a><!--Riot Group-->
+
+    </div>
+
+    <div class=''>
+
+      <div class="">
+
+        <h3>About SSD</h3>
+
+        <a href="#">FAQs</a> <!--Inner links of website via Ids and pages-->
+
+        <a href="#">Blog</a>
+
+        <a href="#">About Us</a>
+
+        <a href="#">Our Vision</a>
+
+        <a href="#">History</a>
+
+      </div>
+
+      <div class="">
+
+        <h3>About the people</h3>
+
+        <a href="#">Contributors</a><!--Great generous people who donate a minimum of 1000-->
+
+        <a href="#">Volunteers</a><!--Those who dedicate their time on a weekly or daily basis.-->
+
+        <a href="#">Partners</a><!--Create content on a regular basis that is SSD related-->
+
+      </div>
+
+      <div class="">
+
+        <h3>How to get involved!</h3>
+
+        <a href="#">Contact Us</a>
+
+        <a href="#">Volunteer Sign Up</a>
+
+        <a href="#">Donate</a>
+
+        <a href="#">Partner Sign Up</a>
+
+      </div>
+
+    </div>
+
+  </div>
+
+  <p>Email </p>
+
+  <p>Copyright of The Good Party <time>2020</time></p>
+
+
+</footer>
