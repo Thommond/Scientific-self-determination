@@ -8,7 +8,10 @@ good party. Where all info and related works like podcasts will be available.
 
 The code of this website can be used as an example of a simple Flask website or
 wiki. You can contribute to this code if errors are in need of fixing. Thanks!
+If you want to know more about SSD and it's priciples then that is th USAGE for 
+this code! Come Check it out!
 
 ## Contributing
 
-If you would like to see changes to this project skeleton, start a conversation as an Issue to discuss your plans.
+This is an open source website, if you would like to participate in contributions 
+feel free to fork this repository and make a pull request all help is welcome!
