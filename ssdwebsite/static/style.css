@@ -15,12 +15,16 @@ body {
   font-family: 'PT Serif', serif;
   background-color: #8C7554;
   color: #fbfbfb;
+  font-size: 10px;
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1, h2, h3, h4, h5, h6, p {
   font-family: 'Playfair Display', serif;
-
+  padding-left: 1rem;
+  font-size: auto;
+  text-align: center;
 }
+
 
 /**
 Layout
@@ -38,8 +42,23 @@ text-decoration: underline;
 cursor: crosshair;
 }
 
+.button-thing {
+  display: flex;
+  align-items: center;
+  width: 140px;
+  justify-content: center;
+  height: 40px;
+  border: 1px solid white;
+  background-color: red;
+}
+
+.button-thing:hover {
+  background-color: yellow;
+}
+
 article {
   display: flex;
+  padding-top: 130px;
   flex-direction: column;
   align-items: center;
   background-color: #A2A3A5;
@@ -58,6 +77,10 @@ footer a {
   color: white;
 }
 
+/**
+Div style and layout
+*/
+
 .outer-ctn {
   display: flex;
   flex-direction: row;
@@ -66,6 +89,7 @@ footer a {
 .inner-ctn {
   margin: 3rem;
   display: flex;
+  max-width: 500px;
   flex-direction: column;
   align-items: center;
 }
@@ -125,6 +149,19 @@ footer .outer-ctn {
   height: 30px;
 }
 
+/**
+ Sticky header styles
+ */
+
+ .header {
+   overflow: hidden;
+   background-color: #333;
+   position: fixed; /* Set the navbar to fixed position */
+   top: 0; /* Position the navbar at the top of the page */
+   width: 100%; /* Full width */
+ }
+
+
 nav {
   padding-bottom: 1rem;
 }
@@ -139,6 +176,7 @@ nav a:hover {
   padding: 3px;
   border: 3px solid blue;
 }
+
 section {
   display: flex;
   flex-direction: column;
@@ -148,10 +186,22 @@ section {
 /**
 Media Query for screens 1005px or smaller.
 */
-@media only screen and (max-width: 1010px) {
+@media only screen and (max-width: 1100px) {
 
   .footer-inner-ctn {
     margin: 1rem;
+  }
+
+  .outer-ctn {
+    margin: auto;
+    padding: 0;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .inner-ctn {
+    padding-bottom: 1rem;
+    border-bottom: 2px dashed white;
   }
 
   #mainHeader a {
@@ -164,16 +214,29 @@ Media Query for screens 1005px or smaller.
 Media Query for screens 530px or less
 */
 
-@media only screen and (max-width: 530px) {
+@media only screen and (max-width: 620px) {
 
-  .footer-inner-ctn {
-    margin: 3px;
-    font-size: auto;
+  footer .inner-ctn {
+    margin: auto;
   }
+
 
   #mainHeader a {
     margin: 3px;
     font-size: auto;
   }
 
+}
+/**
+ Media queries for fluid font size
+*/
+@media screen and (min-width: 320px) {
+  body {
+    font-size: calc(14px + (26 - 14) * ((100vw - 300px) / (3000 - 300)));
+  }
+}
+@media screen and (min-width: 1000px) {
+  html {
+    font-size: 22px;
+  }
 }

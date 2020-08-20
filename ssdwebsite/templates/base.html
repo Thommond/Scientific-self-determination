@@ -3,22 +3,24 @@
 <title>{% block title %}  {% endblock %} -Flaskr</title>
 <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
 <link href="https://fonts.googleapis.com/css2?family=PT+Serif&family=Playfair+Display:wght@600&display=swap" rel="stylesheet">
+<script type="text/javascript" src="{{ url_for('static', filename='index.js')}}">
 
-<header id='mainHeader'>
+</script>
+
+<div id='mainHeader' class='header'>
+
 
   <h1>Scientific Self Determination</h1>
 
   <nav>
 
     <a href="{{ url_for('index')}}">Home</a>
-    <a href="{{ url_for('people_involved.contributors') }}">Contributors</a>
     <a href="{{ url_for('menu_text.vision') }}">Our Vision</a>
-    <a href="{{ url_for('menu_text.media') }}">Media</a>
     <a href="{{ url_for('menu_text.contact') }}">Contact Us</a>
 
   </nav>
 
-</header>
+</div>
 
 <article class="content">
 
