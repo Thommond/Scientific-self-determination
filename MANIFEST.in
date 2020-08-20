@@ -1,4 +1,4 @@
 include ssdwebsite/schema.sql
 graft ssdwebsite/static
-graft ssdWebsite/templates
+graft ssdwebsite/templates
 global-exclude *.pyc

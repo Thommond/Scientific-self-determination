@@ -7,6 +7,10 @@ from flask import (
 
 bp = Blueprint('menu_text', __name__ )
 
+"""Simple text routes and will have
+no functionality in python. Their purpose is to display
+desired text."""
+
 @bp.route('/contact', methods=('GET', 'POST'))
 def contact():
     return render_template('menu-pages/contact.html')

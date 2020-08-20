@@ -7,8 +7,12 @@ from flask import (
 
 bp = Blueprint('people_involved', __name__ )
 
+"""Will list out the contributors
+'volunteers, donors, and partners" of the organization'."""
+
 @bp.route('/contributors', methods=('GET', 'POST'))
 def contributors():
+
     return render_template('contribute/contributors.html')
 
 @bp.route('/partners', methods=('GET', 'POST'))
