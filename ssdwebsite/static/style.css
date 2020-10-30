@@ -1,8 +1,6 @@
-
 /**
 General Styles
 */
-
 html {
   box-sizing: border-box;
 }
@@ -15,7 +13,7 @@ body {
   font-family: 'PT Serif', serif;
   background-color: #8C7554;
   color: #fbfbfb;
-  font-size: 10px;
+  font-size: 8pt;
 }
 
 h1, h2, h3, h4, h5, h6, p {
@@ -24,7 +22,6 @@ h1, h2, h3, h4, h5, h6, p {
   font-size: auto;
   text-align: center;
 }
-
 
 /**
 Layout
@@ -39,7 +36,7 @@ a {
 
 a:hover {
 text-decoration: underline;
-cursor: crosshair;
+cursor: pointer;
 }
 
 .button-thing {
@@ -228,15 +225,18 @@ Media Query for screens 530px or less
 
 }
 /**
- Media queries for fluid font size
+ Fluid
+ Font Size
 */
 @media screen and (min-width: 320px) {
   body {
     font-size: calc(14px + (26 - 14) * ((100vw - 300px) / (3000 - 300)));
   }
 }
+
+
 @media screen and (min-width: 1000px) {
-  html {
-    font-size: 22px;
+  body {
+    font-size: 16px;
   }
 }

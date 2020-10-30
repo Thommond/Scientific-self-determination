@@ -33,7 +33,6 @@ CREATE TABLE contributors (
 )
 
 CREATE TABLE contributorImages (
-
   id INT PRIMARY KEY ,
   name TEXT NOT NULL ,
   photo bytea NOT NULL
