@@ -5,84 +5,104 @@ html {
   box-sizing: border-box;
 }
 
-*, *::before, *::after {
+*,
+*::before,
+*::after {
   box-sizing: inherit;
 }
 
 body {
-  font-family: 'PT Serif', serif;
-  background-color: #8C7554;
-  color: #fbfbfb;
+  font-weight: 200;
+  font-family: "PT Serif", serif;
+  background-color: #eeeeee;
   font-size: 8pt;
 }
 
-h1, h2, h3, h4, h5, h6, p {
-  font-family: 'Playfair Display', serif;
-  padding-left: 1rem;
-  font-size: auto;
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: bolder;
+  font-family: "Playfair Display", serif;
+  text-align: center;
+}
+
+p {
   text-align: center;
 }
 
 /**
 Layout
 */
-
 a {
-  background-color: #F6D84C;
-  padding: 1px;
+  padding: 3px;
   color: black;
   text-decoration: none;
 }
 
 a:hover {
-text-decoration: underline;
-cursor: pointer;
+  cursor: pointer;
 }
 
 .button-thing {
   display: flex;
   align-items: center;
   width: 140px;
+  color: black;
+  text-decoration: none;
   justify-content: center;
   height: 40px;
-  border: 1px solid white;
-  background-color: red;
+  border-radius: 5%;
+  background-color: #eeeeee;
 }
 
 .button-thing:hover {
-  background-color: yellow;
+  background-color: #b22222;
 }
 
 article {
+  background-color: #334257;
   display: flex;
   padding-top: 130px;
   flex-direction: column;
   align-items: center;
-  background-color: #A2A3A5;
-
 }
 
-footer  {
+footer {
+  width: auto;
   display: flex;
+  color: lightgray;
   flex-direction: column;
-  background-color:#252F58 ;
+  background-color: #334257;
   align-items: center;
 }
 
 footer a {
   background-color: inherit;
-  color: white;
 }
 
 /**
 Div style and layout
 */
 
+#slogan {
+  color: lightgray;
+}
+
 .outer-ctn {
   display: flex;
   flex-direction: row;
 }
 
+.highlight {
+  background-color: #eeeeee;
+}
+
+.italic {
+  font-style: italic;
+}
 .inner-ctn {
   margin: 3rem;
   display: flex;
@@ -91,36 +111,26 @@ Div style and layout
   align-items: center;
 }
 
-footer .outer-ctn {
-  margin: 1rem;
-  background-color: #676C72;
-  justify-content: center;
-  width: 100%;
-  padding: 1rem;
-  padding-bottom: 0;
-}
-
 .heading-style {
   display: flex;
   flex-direction: column;
   align-items: center;
-  background-color: #3E52A8;
+  background-color: #476072;
   width: 100%;
-  border-top: 2px solid black;
 }
 
 #mainHeader {
   display: flex;
+  color: lightgray;
   transition: margin 3s;
   flex-direction: column;
   align-items: center;
-  background-color: black;
-  color: white;
+  background-color: #334257;
 }
 
 #mainHeader a {
+  color: lightgray;
   margin: 4rem;
-  color: white;
   background-color: inherit;
 }
 
@@ -137,10 +147,14 @@ footer .outer-ctn {
 }
 
 #homeHeader h2 {
-  background-color: rgba(0,0,0,0.7);
+  background-color: rgba(0, 0, 0, 0.7);
   padding: 1rem;
 }
 
+.homeH3 {
+  font-size: larger;
+  font-weight: bolder;
+}
 .logos {
   width: 30px;
   height: 30px;
@@ -150,31 +164,30 @@ footer .outer-ctn {
  Sticky header styles
  */
 
- .header {
-   overflow: hidden;
-   background-color: #333;
-   position: fixed; /* Set the navbar to fixed position */
-   top: 0; /* Position the navbar at the top of the page */
-   width: 100%; /* Full width */
- }
-
+.header {
+  overflow: hidden;
+  background-color: #333;
+  position: fixed; /* Set the navbar to fixed position */
+  top: 0; /* Position the navbar at the top of the page */
+  width: 100%; /* Full width */
+}
 
 nav {
   padding-bottom: 1rem;
 }
 
 nav a {
-  transition: padding 1.5s, border 1.5s;
+  transition: border 0.5s;
   padding: 5px;
-  border: 3px solid grey;
 }
 
 nav a:hover {
-  padding: 3px;
-  border: 3px solid blue;
+  text-decoration: none;
+  border-bottom: 3px solid #476072;
 }
 
 section {
+  background-color: #548ca8;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -184,7 +197,6 @@ section {
 Media Query for screens 1005px or smaller.
 */
 @media only screen and (max-width: 1100px) {
-
   .footer-inner-ctn {
     margin: 1rem;
   }
@@ -204,7 +216,6 @@ Media Query for screens 1005px or smaller.
   #mainHeader a {
     margin: 1rem;
   }
-
 }
 
 /**
@@ -212,17 +223,14 @@ Media Query for screens 530px or less
 */
 
 @media only screen and (max-width: 620px) {
-
   footer .inner-ctn {
     margin: auto;
   }
-
 
   #mainHeader a {
     margin: 3px;
     font-size: auto;
   }
-
 }
 /**
  Fluid
@@ -233,7 +241,6 @@ Media Query for screens 530px or less
     font-size: calc(14px + (26 - 14) * ((100vw - 300px) / (3000 - 300)));
   }
 }
-
 
 @media screen and (min-width: 1000px) {
   body {
