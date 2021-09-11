@@ -149,8 +149,10 @@ ul {
 }
 
 li {
-  position: relative;
   padding: 1rem;
+}
+.subLi {
+  position: relative;
 }
 
 ul li ul {
@@ -159,7 +161,7 @@ ul li ul {
   position: absolute;
   transition: all 0.5s ease;
   margin-top: 1rem;
-  right: 25px;
+  right: 550px;
   display: none;
 }
 
