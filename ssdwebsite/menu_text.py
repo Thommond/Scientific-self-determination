@@ -22,3 +22,15 @@ def media():
 @bp.route('/ourVision', methods=('GET', 'POST'))
 def vision():
     return render_template('menu-pages/ourVision.html')
+
+@bp.route('/FAQ', methods=('GET', 'POST'))
+def faq():
+    return render_template('menu-pages/visions-submenu/FAQ.html')
+
+@bp.route('/Objectives', methods=('GET', 'POST'))
+def objectives():
+    return render_template('menu-pages/visions-submenu/objectives.html')
+
+@bp.route('/Intro', methods=('GET', 'POST'))
+def intro():
+    return render_template('menu-pages/visions-submenu/intro.html')
