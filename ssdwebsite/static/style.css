@@ -187,6 +187,8 @@ nav a:hover {
 }
 
 section {
+  width: 100%;
+  min-height: 100px;
   background-color: #548ca8;
   display: flex;
   flex-direction: column;
