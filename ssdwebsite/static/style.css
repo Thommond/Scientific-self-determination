@@ -148,6 +148,10 @@ ul {
   padding-left: 0;
 }
 
+.columnList {
+  flex-direction: column;
+}
+
 li {
   padding: 1rem;
 }
