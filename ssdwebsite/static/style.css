@@ -133,6 +133,52 @@ Div style and layout
   margin: 4rem;
   background-color: inherit;
 }
+.subMenu {
+  display: none;
+}
+
+/**
+Ul menus 
+*/
+ul {
+  display: flex;
+  padding: 0;
+  list-style: none;
+  margin: 0;
+  padding-left: 0;
+}
+
+li {
+  position: relative;
+  padding: 1rem;
+}
+
+ul li ul {
+  visibility: hidden;
+  opacity: 0;
+  position: absolute;
+  transition: all 0.5s ease;
+  margin-top: 1rem;
+  right: 25px;
+  display: none;
+}
+
+ul li:hover > ul,
+ul li ul:hover {
+  z-index: 10000;
+  background-color: #334257;
+  visibility: visible;
+  opacity: 1;
+  display: block;
+  width: 125px;
+}
+
+ul li ul li {
+  right: 50px;
+  padding-bottom: 10px;
+  clear: both;
+  width: 100%;
+}
 
 #homeHeader {
   display: flex;
@@ -165,7 +211,6 @@ Div style and layout
  */
 
 .header {
-  overflow: hidden;
   background-color: #333;
   position: fixed; /* Set the navbar to fixed position */
   top: 0; /* Position the navbar at the top of the page */

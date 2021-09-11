@@ -19,9 +19,19 @@
 
   <nav>
 
-    <a href="{{ url_for('index')}}">Home</a>
-    <a href="{{ url_for('menu_text.vision') }}">Vision</a>
-    <a href="{{ url_for('menu_text.contact') }}">Contact</a>
+    <ul>
+      <li><a href="{{ url_for('index')}}">Home</a></li>
+      <li><a href="{{ url_for('menu_text.vision') }}">Vision</a>
+        <ul>
+          <li><a href="#">FAQ</a></li>
+          <li><a href="#">Intro</a></li> 
+          <li><a href="#">Objectives</a></li>
+        </ul>
+      </li>
+      <li>
+        <a href="{{ url_for('menu_text.contact') }}">Contact</a>
+      </li>
+    </ul>
 
   </nav>
 
