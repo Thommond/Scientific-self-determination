@@ -1,2 +1,2 @@
 
-web: flask init-db; gunicorn "ssdwebsite:create_app()"
+ gunicorn "ssdwebsite:create_app()"
