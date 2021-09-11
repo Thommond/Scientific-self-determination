@@ -2,12 +2,9 @@ import os
 
 from flask import Flask, render_template
 
-from sassutils.wsgi import SassMiddleware
-
 #######################
 ##### Error Pages #####
 #######################
-
 
 def page_not_found(e):
   return render_template('error.html'), 404
@@ -24,12 +21,7 @@ def create_app(test_config=None):
 
     # Create the Flask application object using this module's name
     app = Flask(__name__)
-
-    # Defining sass middleware so application can run directly and scss/sass can be used.
-    app.wsgi_app = SassMiddleware(app.wsgi_app, {
-        'ssdwebsite': ('static/sass', 'static/css', '/static/css')
-    })
-
+    
     app.register_error_handler(404, page_not_found)
     app.register_error_handler(403, not_allowed)
 
