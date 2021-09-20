@@ -1,2 +1,2 @@
 
-web: gunicorn --bind 0.0.0.0:$PORT "ssdwebsite:create_app()"
+web: gunicorn "ssdwebsite:create_app()"
