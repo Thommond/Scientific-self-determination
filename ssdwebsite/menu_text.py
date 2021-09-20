@@ -38,3 +38,7 @@ def intro():
 @bp.route('/documents', methods=('GET', 'POST'))
 def documents():
     return render_template('menu-pages/contact-submenu/documents.html')
+
+@bp.route('/volunteering', methods=('GET', 'POST'))
+def volunteer():
+    return render_template('menu-pages/contact-submenu/volunteer.html')
