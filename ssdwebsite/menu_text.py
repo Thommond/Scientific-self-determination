@@ -34,3 +34,7 @@ def objectives():
 @bp.route('/Intro', methods=('GET', 'POST'))
 def intro():
     return render_template('menu-pages/visions-submenu/intro.html')
+
+@bp.route('/documents', methods=('GET', 'POST'))
+def documents():
+    return render_template('menu-pages/contact-submenu/documents.html')
