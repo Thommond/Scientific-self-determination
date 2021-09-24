@@ -1,67 +1,75 @@
 <!DOCTYPE html>
 
 <head>
-
-<meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>{% block title %}{% endblock %} -Flaskr</title>
-<link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}" type="text/css">
-<link href="https://fonts.googleapis.com/css2?family=PT+Serif&family=Playfair+Display:wght@600&display=swap" rel="stylesheet">
-<script type="text/javascript" src="{{ url_for('static', filename='index.js')}}">
-
-</script>
-
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>{% block title %}{% endblock %} -Flaskr</title>
+  <link
+    rel="stylesheet"
+    href="{{ url_for('static', filename='style.css') }}"
+    type="text/css"
+  />
+  <link
+    href="https://fonts.googleapis.com/css2?family=PT+Serif&family=Playfair+Display:wght@600&display=swap"
+    rel="stylesheet"
+  />
+  <script
+    type="text/javascript"
+    src="{{ url_for('static', filename='index.js')}}"
+  ></script>
 </head>
 
-<div id='mainHeader' class='header'>
-
-
+<div id="mainHeader" class="header">
   <h1>Scientific Self Determination</h1>
 
   <nav>
-
     <ul class="headerList">
       <li><a href="{{ url_for('index')}}">Home</a></li>
-      <li><a href="{{ url_for('menu_text.vision') }}">Vision</a>
+      <li>
+        <a href="{{ url_for('menu_text.vision') }}">Values</a>
         <ul>
-          <li class="subLi"><a href="{{ url_for('menu_text.faq') }}">FAQ</a></li>
-          <li class="subLi"><a href="{{ url_for('menu_text.intro') }}">Intro</a></li> 
-          <li class="subLi"><a href="{{ url_for('menu_text.objectives') }}">Objectives</a></li>
+          <li class="subLi">
+            <a href="{{ url_for('menu_text.faq') }}">FAQ</a>
+          </li>
+          <li class="subLi">
+            <a href="{{ url_for('menu_text.intro') }}">Intro</a>
+          </li>
+          <li class="subLi">
+            <a href="{{ url_for('menu_text.objectives') }}">Objectives</a>
+          </li>
         </ul>
       </li>
       <li>
         <a href="{{ url_for('menu_text.contact') }}">Contact</a>
         <ul>
-          <li class="subLi"><a href="{{ url_for('menu_text.documents') }}">Documents</a></li>
-          <li class="subLi"><a href="{{ url_for('menu_text.volunteer') }}">Volunteer</a></li>
+          <li class="subLi">
+            <a href="{{ url_for('menu_text.documents') }}">Documents</a>
+          </li>
+          <li class="subLi">
+            <a href="{{ url_for('menu_text.volunteer') }}">Volunteer</a>
+          </li>
         </ul>
       </li>
     </ul>
-
   </nav>
-
 </div>
 
-<article class="content">
-
-{% block content %}
-
-{% endblock %}
-
-</article>
+<article class="content">{% block content %} {% endblock %}</article>
 
 <footer>
-
   <div class="logo-holder">
+    <img class="logos" src="static/images/logos/mail.png" alt="Email logo" />
 
-    <img class='logos' src="static/images/logos/mail.png" alt="Email logo">
-
-    <a mailto='Thommond@protonmail.com'>Thommond@protonmail.com</a>
-
+    <a mailto="Thommond@protonmail.com">Thommond@protonmail.com</a>
   </div>
 
-  <p>Icons made by <a href="https://www.flaticon.com/authors/freepik" title="Freepik">Freepik</a> from <a href="https://www.flaticon.com/" title="Flaticon"> www.flaticon.com</a></p>
+  <p>
+    Icons made by
+    <a href="https://www.flaticon.com/authors/freepik" title="Freepik"
+      >Freepik</a
+    >
+    from
+    <a href="https://www.flaticon.com/" title="Flaticon"> www.flaticon.com</a>
+  </p>
 
   <p>Copyright of The Good Party <time>2020</time></p>
-
-
 </footer>
