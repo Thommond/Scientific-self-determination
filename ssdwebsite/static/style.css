@@ -13,7 +13,7 @@ html {
 
 body {
   font-weight: 200;
-  font-family: "PT Serif", serif;
+  font-family: 'PT Serif', serif;
   background-color: #eeeeee;
   font-size: 8pt;
 }
@@ -25,7 +25,7 @@ h4,
 h5,
 h6 {
   font-weight: bolder;
-  font-family: "Playfair Display", serif;
+  font-family: 'Playfair Display', serif;
   text-align: center;
 }
 
@@ -88,6 +88,7 @@ Div style and layout
 */
 
 #slogan {
+  font-size: 14pt;
   color: lightgray;
 }
 
@@ -203,7 +204,7 @@ ul li ul li {
 }
 
 #homeHeader h2 {
-  background-color: rgba(0, 0, 0, 0.7);
+  background-color: rgba(0, 0, 0, 1);
   padding: 1rem;
 }
 
